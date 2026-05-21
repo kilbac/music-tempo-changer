@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ ! -d "_input" ]; then
   echo "There is no \"_input\" folder."
@@ -9,6 +9,13 @@ if [ ! -d "_input" ]; then
   echo "The pbm number will be used to convert it to slower tempos."
   echo "It should look something like this: i.e. \"_input/Tool/Bottom_140bpm.m4a\""
   exit 0
+fi
+
+if [ ! -d "_output" ]; then
+  echo "There is no \"_output\" folder."
+  echo "Creating \"_output\" folder..."
+  mkdir _output
+  echo "Folder created. Create a folder within it, with the artists name."
 fi
 
 # Loop through files in the current directory
